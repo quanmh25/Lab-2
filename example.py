@@ -3,6 +3,7 @@
 import csv
 import json
 
+
 DATASET_PATH = "memes_dataset.csv"
 OUT_PATH = "out.json"
 
