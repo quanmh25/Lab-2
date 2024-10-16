@@ -1,0 +1,16 @@
+{
+    "student": {
+        "name": "quan",
+        "age": "19"
+    },
+    "results": [
+        {
+            "name": "quan",
+            "mark": "10"
+        },
+        {
+            "name": "anh",
+            "mark": "9"
+        }
+    ]
+}
