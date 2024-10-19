@@ -22,6 +22,8 @@ def task_1():
         print(cnt)
 
     
+# Task 2:
+
 
 if __name__ == '__main__':
     task_1()
