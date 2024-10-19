@@ -32,8 +32,4 @@
 * О формате CSV: https://blog.skillfactory.ru/glossary/csv/  
 * О библиотеке xml.dom: https://docs.python.org/3/library/xml.dom.minidom.html  
 * О формате XML: https://help.reg.ru/support/hosting/razmeshcheniye-sayta-otobrazheniye-v-brauzere/chto-takoye-format-xml
-<<<<<<< HEAD
-=======
-  
->>>>>>> 484c9dd15e6de58170b81a8583d52cc16b968d3f
 * Web lấy dữ liệu: https://www.kaggle.com/datasets
