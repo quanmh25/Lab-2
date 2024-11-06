@@ -33,3 +33,4 @@
 * О библиотеке xml.dom: https://docs.python.org/3/library/xml.dom.minidom.html  
 * О формате XML: https://help.reg.ru/support/hosting/razmeshcheniye-sayta-otobrazheniye-v-brauzere/chto-takoye-format-xml
 * Web lấy dữ liệu: https://www.kaggle.com/datasets
+https://realpython.com/python-csv/
