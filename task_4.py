@@ -6,7 +6,7 @@ with open("currency.xml", mode = 'r') as xml_file:
     dom = minidom.parseString(xml_data)
     dom.normalize()
 
-    elements = dom.getElementsByTagName("Currency")
+    elements = dom.getElementsByTagName("Valute")
     currency_dict = {}
 
     for node in elements:
@@ -18,7 +18,7 @@ with open("currency.xml", mode = 'r') as xml_file:
                         name = child.firstChild.data
                 if child.tagName == "Value":
                     if child.firstChild.nodeType == 3:
-                        value = float(child.firstChild.data)
+                        value = float(child.firstChild.data.replace(',','.'))
         if name and value is not None:
             currency_dict[name] = value
 
