@@ -1,4 +1,4 @@
-# Practical lesson on Tue
+# Practical lesson on Tue 08.10.24
 
 import csv
 import json
@@ -33,18 +33,19 @@ def get_object_alt(line, title):
 
 def get_object(line, title):
     fields = []
-    value = ""
+    value = ""                               # Chuỗi rỗng
     in_complex = False
 
-    for char in line:
-        if in_complex: 
+    for char in line:                        # Mỗi lần lặp các ký tự trong line sẽ được gắn vào biến char
+        # nếu đang ở trong trường phức tạp các ký tự sẽ được tích lũy cho đến khi gặp dấu ngoặc kép đóng
+        if in_complex:                
             value += char
 
-            if char == '"':
-                value = value[:-1]
-                fields.append(value)
+            if char == '"':                  # Khi gặp dấu ngoặc kép đóng "
+                value = value[:-1]           # Bỏ dấu ngoặc kép
+                fields.append(value)             
                 value = ''
-                in_complex = False
+                in_complex = False           # Đặt lại để thông báo rằng đã ra khỏi trường phức tạp
         else:
             if char not in (',', '"'):
                 value += char
@@ -59,7 +60,8 @@ def get_object(line, title):
                 in_complex = True
                 continue
 
-    result = {col: f for col, f in zip(title, fields)}
+    # Hàm sử dụng zip để ghép cặp tiêu đề với cột giá trị tương ứng, rồi trả về kết quả dưới dạng từ điển
+    result = {col: f for col, f in zip(title, fields)}         
     return result
 
 
@@ -94,3 +96,7 @@ if __name__ == "__main__":
         res = json.dumps(res, indent=4)
         with open(OUT_PATH, "w") as out:
             out.write(res)
+
+
+# Trường phức tạp là gì? (complex field)
+# Là trường dữ liệu được bao quanh bởi dấu ngoặc kép (""), những tường này chứa ký tự đặc biệt (có thể là dấu phẩy - dễ gây nhầm lẫn với dấu phẩy ngăn cách trong csv)

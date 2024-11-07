@@ -12,10 +12,8 @@ def csv_learn():
         csv_file = csv.DictReader(file)        # Đọc từng dòng của tệp csv sau đó chuyển đổi nó thành object dictionary 
         lst = list(csv_file)                   # list(dictionary) 
     # In kiểu này xấu, khó nhìn   
-        # print(lst)                            
-        # for i in lst:
-        #     print(i)
-
+        print(lst)                            
+    
     # Dùng json để in ra định dạng đẹp
         print(json.dumps(lst, indent = 4))
 
