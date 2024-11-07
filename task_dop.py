@@ -18,8 +18,10 @@ with open("books-en.csv", mode = 'r') as csv_file:
     for row in table[1:]:
         cnt = int(row[5])
         name = row[1]
-        price = float(row[6].replace(',','.'))
-        p.append((cnt, name, price))                             # Packaging to create a single argument because a list doesn't accept 3 arguments at the same time
+        # Convert the value of price to a float
+        price = float(row[6].replace(',','.'))       
+        # Packaging to create a single argument because a list doesn't accept 3 arguments at the same time            
+        p.append((cnt, name, price))                            
     
     p.sort(key = lambda x: (x[0], x[2]), reverse = True)         # Sort in descending
 
