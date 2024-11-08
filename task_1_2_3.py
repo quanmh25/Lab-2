@@ -52,7 +52,7 @@ def task_3():
                 row = random.choice(tmp)
                 if len(row) >= 4:
                     new_file.write(str(i + 1) +" " + str(row[2]) +'.'+ str(row[1]) + '-' + str(row[3]) + '\n')
-                    print("Написано")
+            print("c) Написано")
     
 # Extensible Markup Language
 
@@ -60,3 +60,7 @@ if __name__ == '__main__':
     task_1()
     task_2()
     task_3()
+
+
+# Random.choice chỉ hoạt động với List và các kiểu dữ liệu có thứ tự: string, tuple
+# Không hoạt động với từ điển Dict

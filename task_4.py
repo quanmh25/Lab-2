@@ -1,6 +1,6 @@
 import xml.dom.minidom as minidom
 
-with open("currency.xml", mode = 'r') as xml_file:
+with open("currency.xml", mode = 'r', encoding = "windows-1251") as xml_file:
     xml_data = xml_file.read()
 
     dom = minidom.parseString(xml_data)
@@ -21,9 +21,9 @@ with open("currency.xml", mode = 'r') as xml_file:
                         value = float(child.firstChild.data.replace(',','.'))
         if name and value is not None:
             currency_dict[name] = value
-
-        if node.getAttribute('id') == 'bk106':
-            print(node.getElementsByTagName('Name')[0].firstChild.data)
+    # To check which currency has such id
+        # if node.getAttribute('id') == 'bk106':
+        #     print(node.getElementsByTagName('Name')[0].firstChild.data)
 
     print(currency_dict)
     for key in currency_dict.keys():
